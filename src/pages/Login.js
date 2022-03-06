@@ -33,6 +33,7 @@ class Login extends React.Component {
     const { email } = this.state;
     const { addEmailToGlobalStage, history } = this.props;
     addEmailToGlobalStage(email);
+    console.log(history);
     history.push('/carteira');
   }
 
@@ -82,7 +83,9 @@ const mapDispatchToProps = (dispatch) => ({
 
 Login.propTypes = {
   addEmailToGlobalStage: PropTypes.func.isRequired,
-  history: PropTypes.string.isRequired,
+  history: PropTypes.shape({
+    push: PropTypes.func,
+  }).isRequired,
 };
 
 export default connect(null, mapDispatchToProps)(Login);
