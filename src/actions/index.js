@@ -14,6 +14,11 @@ export const saveExpenses = (expenses) => ({
   },
 });
 
+export const deleteExpense = (expense) => ({
+  type: 'DELETE_EXPENSE',
+  expense,
+});
+
 const getApiCurrencies = (currencies) => ({ type: 'SAVE_CURRENCIES', currencies });
 
 export const fetchCurrenciesThunk = () => async (dispatch) => {
