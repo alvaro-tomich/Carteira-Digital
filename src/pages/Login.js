@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { saveEmail } from '../actions';
+import '../styles/login.css';
 
 class Login extends React.Component {
   constructor() {
@@ -45,32 +46,35 @@ class Login extends React.Component {
     const isDisabled = passwordCheck || !emailCheck;
 
     return (
-      <form onSubmit={ this.handleSubmit }>
-        <label htmlFor="email-input">
-          <input
-            name="email"
-            type="email"
-            data-testid="email-input"
-            placeholder="Digite seu email"
-            onChange={ this.handleChange }
-          />
-        </label>
-        <label htmlFor="password-input">
-          <input
-            name="password"
-            type="password"
-            data-testid="password-input"
-            placeholder="Digite sua senha"
-            onChange={ this.handleChange }
-          />
-        </label>
-        <button
-          type="submit"
-          disabled={ isDisabled }
-        >
-          Entrar
-        </button>
-      </form>
+      <div className="login-container">
+        <h1>Wallet</h1>
+        <form onSubmit={ this.handleSubmit } className="form-login">
+          <label htmlFor="email-input">
+            <input
+              name="email"
+              type="email"
+              data-testid="email-input"
+              placeholder="Digite seu email"
+              onChange={ this.handleChange }
+            />
+          </label>
+          <label htmlFor="password-input">
+            <input
+              name="password"
+              type="password"
+              data-testid="password-input"
+              placeholder="Digite sua senha"
+              onChange={ this.handleChange }
+            />
+          </label>
+          <button
+            type="submit"
+            disabled={ isDisabled }
+          >
+            Entrar
+          </button>
+        </form>
+      </div>
     );
   }
 }

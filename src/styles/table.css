@@ -1,0 +1,89 @@
+thead {
+  border-color: inherit;
+  display: table-header-group;
+  vertical-align: middle;
+}
+
+table thead {
+  background-color: #31393e;
+  padding: 15px;
+}
+
+
+table {
+  align-items: center;
+  border-collapse: separate;
+  border-color: grey;
+  border-spacing: 2px;
+  display: flex;
+  flex: 1 1;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 50px;
+  text-indent: initial;
+}
+
+table thead tr {
+  align-items: center;
+  color: #ddd;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+}
+
+tbody {
+  border-color: inherit;
+  display: table-row-group;
+  vertical-align: middle;
+}
+
+table tbody tr {
+  align-items: center;
+  border-bottom: 1px solid rgba(41, 41, 46, 0.4);
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  justify-content: center;
+  padding: 0 20px;
+  width: 100vw;
+}
+
+td {
+  vertical-align: inherit;
+}
+
+table tbody tr td {
+  align-items: center;
+  display: flex;
+  height: 60px;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.edit {
+  background-color: #fcbf06;
+  border: 1px solid rgba(41, 41, 46, 0.5);
+  border-radius: 6px;
+  color: #29292e;
+  cursor: pointer;
+  height: 40px;
+  margin: 5px;
+  padding: 10px;
+  transition: 0.2s ease-in-out;
+  width: 40px;
+}
+
+.remove {
+  background-color: red;
+  border: 1px solid rgba(41, 41, 46, 0.5);
+  border-radius: 6px;
+  color: #29292e;
+  cursor: pointer;
+  height: 40px;
+  margin: 5px;
+  padding: 10px;
+  transition: 0.2s ease-in-out;
+  width: 40px;
+}
+
+.button-content {
+  display: flex;
+}

@@ -1,0 +1,20 @@
+header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+header h1 {
+  color: #03a86c;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+header .user-infos {
+  display: flex;
+  font-size: 18px;
+  gap: 50px;
+  grid-gap: 50px;
+  justify-content: space-between;
+}

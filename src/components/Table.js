@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { deleteExpense } from '../actions';
+import '../styles/table.css';
 
 class Table extends React.Component {
   render() {
@@ -39,20 +40,23 @@ class Table extends React.Component {
                   }
                 </td>
                 <td>Real</td>
-                <td>
-                  <button type="button">
-                    Editar
-                  </button>
-                </td>
-                <td>
-                  <button
-                    data-testid="delete-btn"
-                    type="button"
-                    onClick={ () => deleteCurrentExpense(curr.id) }
-                  >
-                    Excluir
-                  </button>
-                </td>
+                <div className="button-content">
+                  <td>
+                    <button type="button" className="edit">
+                      <img src="https://trybe-wallet.surge.sh/static/media/editIcon.7adc7d91.svg" alt="edit-icon" />
+                    </button>
+                  </td>
+                  <td>
+                    <button
+                      className="remove"
+                      data-testid="delete-btn"
+                      type="button"
+                      onClick={ () => deleteCurrentExpense(curr.id) }
+                    >
+                      <img src="https://trybe-wallet.surge.sh/static/media/trashIcon.eea42727.svg" alt="remove-icon" />
+                    </button>
+                  </td>
+                </div>
               </tr>
             ))
           }

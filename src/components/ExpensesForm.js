@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { saveExpenses, fetchCurrenciesThunk } from '../actions/index';
 import getCurrencies from '../services/getCurrencies';
+import '../styles/expenses-form.css';
 
 class ExpensesForm extends React.Component {
   constructor() {
@@ -61,7 +62,7 @@ class ExpensesForm extends React.Component {
     const { currencies } = this.props;
     const { value } = this.state;
     return (
-      <form>
+      <form className="expenses-form">
         <label htmlFor="value">
           Valor:
           <input
